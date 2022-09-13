@@ -9,7 +9,7 @@
   "scripts": {
     "build": "npx tsc`",
     "start": "npx tsc && node ./dist/server.js",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon --delay 1000ms -q dist/index.js\"",
+    "dev": "npx kill-port 3000 && concurrently \"npx tsc --watch\" \"nodemon --delay 1000ms -q dist/index.js\"",
     "lint": "eslint . --ext .ts"
   },
   "dependencies": {
